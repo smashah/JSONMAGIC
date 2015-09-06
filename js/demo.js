@@ -74,7 +74,7 @@ var jsonx = getIt(querystring);
 
 
         function gotoURL(){
-    window.location = "http://smashah.github.io/JSONMAGIC/?xrl=" + textarea;
+    window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=" + textarea);
                             }
 
     button.addEventListener("click", gotoURL());
