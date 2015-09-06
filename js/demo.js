@@ -11,8 +11,7 @@ require(["../src/json.human"], function (JsonHuman) {
         raw = document.getElementById("output-raw"),
         formatTime = document.getElementById("format-time"),
         renderTime = document.getElementById("render-time"),
-        button = document.getElementById("convert")
-        );
+        button = document.getElementById("convert");
 
     function convert(input, output) {
         var node, t1, t2, t3, formatTimeMs, renderTimeMs;
