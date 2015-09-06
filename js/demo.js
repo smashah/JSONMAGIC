@@ -79,7 +79,7 @@ console.log("doconvert");
             var x = document.getElementById("input").value
 
         console.log("Getting json from " + x);
-            // window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/");
+            window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=" + x);
             console.log(x);
                     });
 
