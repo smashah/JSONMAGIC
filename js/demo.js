@@ -79,7 +79,7 @@ console.log("doconvert");
 
     button.addEventListener("click", function(){
             // window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/");
-            console.log("addEventListener");
+            console.log("textarea");
                     });
 
     letsGo();
