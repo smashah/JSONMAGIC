@@ -6,13 +6,14 @@ require.config({
 });
 require(["../src/json.human"], function (JsonHuman) {
     "use strict";
-        textarea = document.getElementById("input").value,
+        var textarea = document.getElementById("input").value,
         output = document.getElementById("output"),
         raw = document.getElementById("output-raw"),
         formatTime = document.getElementById("format-time"),
         renderTime = document.getElementById("render-time"),
         button = document.getElementById("convert");
 
+        console.log("Getting json from " + textarea);
     function convert(input, output) {
         var node, t1, t2, t3, formatTimeMs, renderTimeMs;
         t1 = Date.now();
