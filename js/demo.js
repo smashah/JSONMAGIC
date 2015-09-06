@@ -65,7 +65,7 @@ var jsonx = getIt(querystring);
         try {
             return _doConvert();
         } catch (error) {
-            alert("Error parsing json:\n" + error.stack);
+            console.log("Error parsing json:\n" + error.stack);
             return;
         }
     }
