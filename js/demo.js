@@ -62,7 +62,6 @@ var jsonx = getIt(querystring);
 console.log("letsgo");
 }   
         
-    letsGo();
     function _doConvert() {
         var json = x;
 console.log("doconvert");
@@ -78,12 +77,10 @@ console.log("doconvert");
         }
     }
 
+    button.addEventListener("click", function(){
+            window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/");
+                    });
 
-        function gotoURL(){
-                             window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/");
-                        }
-
-    button.addEventListener("click", gotoURL());
-
+    letsGo();
     //doConvert();
 });
