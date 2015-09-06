@@ -14,6 +14,7 @@ require(["../src/json.human"], function (JsonHuman) {
         button = document.getElementById("convert");
 
         console.log("Getting json from " + textarea);
+
     function convert(input, output) {
         var node, t1, t2, t3, formatTimeMs, renderTimeMs;
         t1 = Date.now();
@@ -58,11 +59,13 @@ function letsee(data) {console.log(data)}
 
 function letsGo(){
 var jsonx = getIt(querystring);
-}
+console.log("letsgo");
+}   
         
     letsGo();
     function _doConvert() {
         var json = x;
+console.log("doconvert");
         return convert(json, output);
     }
 
@@ -77,8 +80,8 @@ var jsonx = getIt(querystring);
 
 
         function gotoURL(){
-    window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=" + textarea);
-                            }
+                             window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/");
+                        }
 
     button.addEventListener("click", gotoURL());
 
