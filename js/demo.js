@@ -33,7 +33,7 @@ require(["../src/json.human"], function (JsonHuman) {
         renderTime.innerHTML = "" + renderTimeMs + "ms";
     }
 
-var q = window.location.search.substring(5);
+var q = decodeURIComponent(window.location.search.substring(5));
 var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
 var x;
 
@@ -76,8 +76,7 @@ console.log("doconvert");
     }
 
     button.addEventListener("click", function(){
-            var x = document.getElementById("input").value
-
+            var x = encodeURIComponent(document.getElementById("input").value)
         console.log("Getting json from " + x);
             window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=" + x);
             console.log(x);
