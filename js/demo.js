@@ -77,8 +77,7 @@ console.log("doconvert");
     }
 
     button.addEventListener("click", function(){
-            var textarea = document.getElementById("input");
-            var x = textarea.value
+            var x = document.getElementById("input").value
             // window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/");
             console.log(x);
                     });
