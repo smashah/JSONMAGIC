@@ -44,7 +44,7 @@ require(["../src/json.human"], function (JsonHuman) {
 var querystring = "http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
 var x;
 
-function getIt(querystring) {bodycontent =  ($.ajax({
+function getIt(querystring) {return ($.ajax({
             type: "GET",
             dataType: "jsonp",
             url: querystring, 
@@ -52,18 +52,14 @@ function getIt(querystring) {bodycontent =  ($.ajax({
                 console.log( "inside function for data" + data);
                 responseobject = (data)
                 x = data;
-                letsee();
+                letsee(data);
                 doConvert;
-                return responseobject;
+                return data;
             }
-        }).responseText);
-                             return bodycontent;
-                            }
-function letsee() {console.log(x)}
-var json = getIt(querystring);
+        }).responseText);}
+function letsee(data) {console.log(data)}
 
-
-
+var jsonx = getIt(querystring);
     function _doConvert() {
         var json = x;
         return convert(json, output);
