@@ -52,12 +52,15 @@ function getIt(querystring) {return ($.ajax({
             success: function(data) {
                 // console.log( "inside function for data" + data);
                 // responseobject = (data)
+                alert(data);
                 x = data;
                 letsee(data);
                 doConvert;
                 return data;
             }
         }).responseText);}
+
+
 function letsee(data) {console.log(data)}
 
 var jsonx = getIt(querystring);
