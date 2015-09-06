@@ -6,8 +6,7 @@ require.config({
 });
 require(["../src/json.human"], function (JsonHuman) {
     "use strict";
-        var textarea = document.getElementById("input"),
-        output = document.getElementById("output"),
+        var output = document.getElementById("output"),
         raw = document.getElementById("output-raw"),
         formatTime = document.getElementById("format-time"),
         renderTime = document.getElementById("render-time"),
@@ -78,6 +77,7 @@ console.log("doconvert");
     }
 
     button.addEventListener("click", function(){
+            var textarea = document.getElementById("input");
             var x = textarea.value
             // window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/");
             console.log(x);
