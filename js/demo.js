@@ -24,6 +24,7 @@ require(["../src/json.human"], function (JsonHuman) {
         t2 = Date.now();
 
         output.innerHTML = "";
+        console.log("did it");
         output.appendChild(node);
         t3 = Date.now();
         raw.textContent = output.innerHTML;
@@ -49,8 +50,8 @@ function getIt(querystring) {return ($.ajax({
             dataType: "jsonp",
             url: querystring, 
             success: function(data) {
-                console.log( "inside function for data" + data);
-                responseobject = (data)
+                // console.log( "inside function for data" + data);
+                // responseobject = (data)
                 x = data;
                 letsee(data);
                 doConvert;
