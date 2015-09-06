@@ -55,7 +55,7 @@ function getIt(querystring) {return ($.ajax({
                 alert(data);
                 x = data;
                 letsee(data);
-                doConvert;
+                doConvert();
                 return data;
             }
         }).responseText);}
@@ -80,5 +80,5 @@ var jsonx = getIt(querystring);
 
     button.addEventListener("click", doConvert);
 
-    doConvert();
+    //doConvert();
 });
