@@ -37,12 +37,8 @@ require(["../src/json.human"], function (JsonHuman) {
         renderTime.innerHTML = "" + renderTimeMs + "ms";
     }
 
-
-
-
-
-
-var querystring = "http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
+var q = window.location.search.substring(5);
+var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
 var x;
 
 function getIt(querystring) {return ($.ajax({
@@ -52,7 +48,7 @@ function getIt(querystring) {return ($.ajax({
             success: function(data) {
                 // console.log( "inside function for data" + data);
                 // responseobject = (data)
-                alert(data);
+                // alert(data);
                 x = data;
                 letsee(data);
                 doConvert();
