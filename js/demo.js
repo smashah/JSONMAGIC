@@ -49,12 +49,12 @@ function getIt(querystring) {bodycontent =  ($.ajax({
             dataType: "jsonp",
             url: querystring, 
             success: function(data) {
-                console.log(data);
+                console.log( "inside function for data" + data);
                 responseobject = (data)
                 x = data;
                 letsee();
-                return responseobject;
                 doConvert;
+                return responseobject;
             }
         }).responseText);
                              return bodycontent;
