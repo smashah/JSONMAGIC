@@ -6,7 +6,7 @@ require.config({
 });
 require(["../src/json.human"], function (JsonHuman) {
     "use strict";
-    var textarea = document.getElementById("input"),
+        textarea = document.getElementById("input").value,
         output = document.getElementById("output"),
         raw = document.getElementById("output-raw"),
         formatTime = document.getElementById("format-time"),
@@ -55,7 +55,9 @@ function getIt(querystring) {return ($.ajax({
 
 function letsee(data) {console.log(data)}
 
+function letsGo(){
 var jsonx = getIt(querystring);
+}
     function _doConvert() {
         var json = x;
         return convert(json, output);
@@ -70,7 +72,12 @@ var jsonx = getIt(querystring);
         }
     }
 
-    button.addEventListener("click", doConvert);
+
+        function gotoURL(){
+    window.location = "http://smashah.github.io/JSONMAGIC/?xrl=" + textarea;
+                            }
+
+    button.addEventListener("click", gotoURL());
 
     //doConvert();
 });
