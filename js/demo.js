@@ -43,7 +43,7 @@ function getIt(querystring) {return ($.ajax({
             dataType: "jsonp",
             url: querystring, 
             success: function(data) {
-                // console.log( "inside function for data" + data);
+                 console.log( "inside function for data");
                 // responseobject = (data)
                 // alert(data);
                 x = data;
@@ -59,6 +59,8 @@ function letsee(data) {console.log(data)}
 function letsGo(){
 var jsonx = getIt(querystring);
 }
+        
+    letsGo();
     function _doConvert() {
         var json = x;
         return convert(json, output);
