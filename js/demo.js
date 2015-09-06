@@ -12,10 +12,7 @@ require(["../src/json.human"], function (JsonHuman) {
         formatTime = document.getElementById("format-time"),
         renderTime = document.getElementById("render-time"),
         button = document.getElementById("convert"),
-        editor = CodeMirror.fromTextArea(textarea, {
-            mode: "application/json",
-            json: true
-        });
+        );
 
     function convert(input, output) {
         var node, t1, t2, t3, formatTimeMs, renderTimeMs;
