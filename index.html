@@ -19,13 +19,13 @@
         }
 
         if (isEncoded(x) == false) {
-            console.log(decodeURIComponent(x) !== x);
+            //console.log(decodeURIComponent(x) !== x);
             var d = encodeURIComponent(x);
-            console.log("Not encoded. Encoding the query string: " + x + " to " + d);           
-            window.location.replace("http://smashah.github.io/JSONMAGIC/#xrl=" + d);
+            //console.log("Not encoded. Encoding the query string: " + x + " to " + d);           
+            window.location.href = ("http://smashah.github.io/JSONMAGIC/#xrl=" + d);
         } else {
-            console.log(decodeURIComponent(x) !== x)
-            console.log(decodeURIComponent(x))
+            //console.log(decodeURIComponent(x) !== x)
+            //console.log(decodeURIComponent(x))
             console.log("The string is already encoded, continuing");
         }
     }
