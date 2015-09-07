@@ -5,7 +5,7 @@
         <title>json.human.js - Json Formatting for Human Beings</title>
         <script type="text/javascript">
         var x = window.location.search.substring(5);
-
+        if (x !== "" ){
         function isEncoded(str){
             return decodeURIComponent(str) !== str;
         }
@@ -20,6 +20,7 @@
             console.log(decodeURIComponent(x))
             console.log("The string is already encoded, continuing");
         }
+    }
 
         </script>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
