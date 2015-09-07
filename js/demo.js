@@ -33,23 +33,7 @@ require(["../src/json.human"], function (JsonHuman) {
         renderTime.innerHTML = "" + renderTimeMs + "ms";
     }
 
-        var url = window.location.href;
-
-
-        var s; // = url.substring( url.indexOf('#xrl=') + 5);
-
-         if (url.indexOf('#xrl=') == -1){
-            s = "";
-        }
-        else{
-        s = url.substring( url.indexOf('#xrl=') + 5);
-        }
-
-
-        console.log(s);
-        var q = decodeURIComponent(s);//window.location.search.substring(5));
-        console.log(q);
-        var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
+        
         var x;
 function getIt(querystring) {return ($.ajax({
             type: "GET",
@@ -70,11 +54,33 @@ function getIt(querystring) {return ($.ajax({
 function letsee(data) {console.log(data)}
 
 function letsGo(){
+
+
+
+var url = window.location.href;
+
+
+        var s; // = url.substring( url.indexOf('#xrl=') + 5);
+
+         if (url.indexOf('#xrl=') == -1){
+            s = "";
+        }
+        else{
+        s = url.substring( url.indexOf('#xrl=') + 5);
+        }
+
+
+        console.log(s);
+        var q = decodeURIComponent(s);//window.location.search.substring(5));
+        console.log(q);
+        var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
+
+    
     if (querystring == "") {console.log("No link")} else {
-var jsonx = getIt(querystring);
-console.log("letsgo");
-}
-}   
+    var jsonx = getIt(querystring);
+    console.log("letsgo");
+    }
+    }   
         
     function _doConvert() {
         var json = x;
