@@ -3,6 +3,24 @@
     <head>
         <meta charset='utf-8'>
         <title>json.human.js - Json Formatting for Human Beings</title>
+        <script type="text/javascript">        
+        var x = encodeURIComponent((window.location.search.substring(5));
+        function isEncoded(str){
+            return decodeURIComponent(str) !== str;
+        }
+
+        if (isEncoded(x) == false) {
+            console.log(decodeURIComponent(x) !== x)
+            console.log(decodeURIComponent(x))
+            console.log("Not encoded. Encoding the query string: " + x)            
+            window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=" + str);
+        } else {
+            console.log(decodeURIComponent(x) !== x)
+            console.log(decodeURIComponent(x))
+            console.log("The string is already encoded, continuing");
+        }
+
+        </script>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <link rel="stylesheet" media="all" href="css/demo.css" />
