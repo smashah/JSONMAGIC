@@ -4,12 +4,12 @@
         <meta charset='utf-8'>
         <title>json.human.js - Json Formatting for Human Beings</title>
         <script type="text/javascript">        
-        var x = encodeURIComponent(window.location.search.substring(5));
+        var x = window.location.search.substring(5);
         function isEncoded(str){
             return decodeURIComponent(str) !== str;
         }
 
-        if (isEncoded(x) == false) {
+        if (isEncoded(x) == true) {
             console.log(decodeURIComponent(x) !== x)
             console.log(decodeURIComponent(x))
             console.log("Not encoded. Encoding the query string: " + x)            
