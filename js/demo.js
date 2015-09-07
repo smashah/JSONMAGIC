@@ -70,8 +70,10 @@ function getIt(querystring) {return ($.ajax({
 function letsee(data) {console.log(data)}
 
 function letsGo(){
+    if (querystring == "") {console.log("No link")} else {
 var jsonx = getIt(querystring);
 console.log("letsgo");
+}
 }   
         
     function _doConvert() {
@@ -94,6 +96,7 @@ console.log("doconvert");
             console.log("Getting json from " + x);
             window.location.replace("http://smashah.github.io/JSONMAGIC/#xrl=" + x);
             console.log(x);
+            letsGo();
                     });
 
     letsGo();
