@@ -92,7 +92,7 @@ console.log("doconvert");
     button.addEventListener("click", function(){
             var x = encodeURIComponent(document.getElementById("input").value)
             console.log("Getting json from " + x);
-            window.location.replace("http://smashah.github.io/JSONMAGIC/#xrl=" + x);
+            window.location.href("http://smashah.github.io/JSONMAGIC/#xrl=" + x);
             console.log(x);
                     });
 
