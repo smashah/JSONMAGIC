@@ -34,10 +34,12 @@ require(["../src/json.human"], function (JsonHuman) {
     }
 
         var url = window.location.href;
-        var x = url.substring( url.indexOf('#') + 5);
-        var q = decodeURIComponent(x);//window.location.search.substring(5));
+        var s = url.substring( url.indexOf('#') + 5);
+        console.log(s);
+        var q = decodeURIComponent(s);//window.location.search.substring(5));
+        console.log(q);
         var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
-
+        var x;
 function getIt(querystring) {return ($.ajax({
             type: "GET",
             dataType: "jsonp",
@@ -78,8 +80,8 @@ console.log("doconvert");
 
     button.addEventListener("click", function(){
             var x = encodeURIComponent(document.getElementById("input").value)
-        console.log("Getting json from " + x);
-            window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=" + x);
+            console.log("Getting json from " + x);
+            window.location.replace("http://smashah.github.io/JSONMAGIC/#xrl=" + x);
             console.log(x);
                     });
 
