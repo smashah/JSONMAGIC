@@ -4,7 +4,9 @@
         <meta charset='utf-8'>
         <title>json.human.js - Json Formatting for Human Beings</title>
         <script type="text/javascript">
-        var x = window.location.search.substring(5);
+        var url = window.location.href;
+        var x = url.substring( url.indexOf('#') + 5);
+        //var x = window.location.search.substring(5);
         if (x !== "" ){
         function isEncoded(str){
             return decodeURIComponent(str) !== str;
@@ -14,7 +16,7 @@
             console.log(decodeURIComponent(x) !== x);
             var d = encodeURIComponent(x);
             console.log("Not encoded. Encoding the query string: " + x + " to " + d);           
-            window.location.replace("http://smashah.github.io/JSONMAGIC/?xrl=" + d);
+            window.location.replace("http://smashah.github.io/JSONMAGIC/#xrl=" + d);
         } else {
             console.log(decodeURIComponent(x) !== x)
             console.log(decodeURIComponent(x))

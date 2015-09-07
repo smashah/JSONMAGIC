@@ -33,9 +33,10 @@ require(["../src/json.human"], function (JsonHuman) {
         renderTime.innerHTML = "" + renderTimeMs + "ms";
     }
 
-var q = decodeURIComponent(window.location.search.substring(5));
-var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
-var x;
+        var url = window.location.href;
+        var x = url.substring( url.indexOf('#') + 5);
+        var q = decodeURIComponent(x);//window.location.search.substring(5));
+        var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
 
 function getIt(querystring) {return ($.ajax({
             type: "GET",
