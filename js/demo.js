@@ -38,7 +38,7 @@ require(["../src/json.human"], function (JsonHuman) {
 
         var s; // = url.substring( url.indexOf('#xrl=') + 5);
 
-         if (url.indexOf('#xrl=') = -1){
+         if (url.indexOf('#xrl=') == -1){
             s = "";
         }
         else{
