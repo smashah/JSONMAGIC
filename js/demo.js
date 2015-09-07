@@ -44,7 +44,7 @@ function getIt(querystring) {return ($.ajax({
                 // responseobject = (data)
                 // alert(data);
                 x = data;
-                letsee(data);
+                //letsee(data);
                 doConvert();
                 return data;
             }
@@ -70,12 +70,12 @@ var url = window.location.href;
         }
 
 
-        console.log(s);
+        //console.log(s);
         var q = decodeURIComponent(s);//window.location.search.substring(5));
-        console.log(q);
+        //console.log(q);
         var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
 
-    
+
     if (querystring == "") {console.log("No link")} else {
     var jsonx = getIt(querystring);
     console.log("letsgo");
@@ -84,7 +84,7 @@ var url = window.location.href;
         
     function _doConvert() {
         var json = x;
-console.log("doconvert");
+        //console.log("doconvert");
         return convert(json, output);
     }
 
@@ -92,7 +92,7 @@ console.log("doconvert");
         try {
             return _doConvert();
         } catch (error) {
-            console.log("Error parsing json:\n" + error.stack);
+            //console.log("Error parsing json:\n" + error.stack);
             return;
         }
     }
@@ -101,7 +101,7 @@ console.log("doconvert");
             var x = encodeURIComponent(document.getElementById("input").value)
             console.log("Getting json from " + x);
             window.location.replace("http://smashah.github.io/JSONMAGIC/#xrl=" + x);
-            console.log(x);
+            //console.log(x);
             letsGo();
                     });
 
