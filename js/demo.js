@@ -34,7 +34,7 @@ require(["../src/json.human"], function (JsonHuman) {
     }
 
         var url = window.location.href;
-        var s = url.substring( url.indexOf('#') + 5);
+        var s = url.substring( url.indexOf('#xrl=') + 5);
         console.log(s);
         var q = decodeURIComponent(s);//window.location.search.substring(5));
         console.log(q);
