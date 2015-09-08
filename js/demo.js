@@ -36,7 +36,7 @@ require(["../src/json.human"], function (JsonHuman) {
 
 		
 		var x;
-function getIt(querystring) {return ($.ajax({
+		function getIt(querystring) {return ($.ajax({
 			type: "GET",
 			dataType: "jsonp",
 			url: querystring, 
@@ -50,20 +50,15 @@ function getIt(querystring) {return ($.ajax({
 				return data;
 			}
 		}).responseText);}
-
+		console.log(lol);
 
 function letsee(data) {console.log(data)}
 
 function letsGo(){
-
-
-
 var url = window.location.href;
-
-
 		var s; // = url.substring( url.indexOf('#xrl=') + 5);
 
-		 if (url.indexOf('#xrl=') == -1){
+		if (url.indexOf('#xrl=') == -1){
 			s = "";
 		}
 		else{
