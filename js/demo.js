@@ -35,48 +35,47 @@ require(["../src/json.human"], function (JsonHuman) {
 	}
 
 		
-		var x;
-		function getIt(querystring) {return ($.ajax({
-			type: "GET",
-			dataType: "jsonp",
-			url: querystring, 
-			success: function(data) {
-				 console.log( "inside function for data");
-				// responseobject = (data)
-				// alert(data);
-				x = data;
-				//letsee(data);
-				doConvert();
-				return data;
-			}
-		}).responseText);}
-		console.log(lol);
+// 		var x;
+// 		function getIt(querystring) {return ($.ajax({
+// 			type: "GET",
+// 			dataType: "jsonp",
+// 			url: querystring, 
+// 			success: function(data) {
+// 				 console.log( "inside function for data");
+// 				// responseobject = (data)
+// 				// alert(data);
+// 				x = data;
+// 				//letsee(data);
+// 				doConvert();
+// 				return data;
+// 			}
+// 		}).responseText);}
 
-function letsee(data) {console.log(data)}
+// function letsee(data) {console.log(data)}
 
-function letsGo(){
-var url = window.location.href;
-		var s; // = url.substring( url.indexOf('#xrl=') + 5);
+// function letsGo(){
+// var url = window.location.href;
+// 		var s; // = url.substring( url.indexOf('#xrl=') + 5);
 
-		if (url.indexOf('#xrl=') == -1){
-			s = "";
-		}
-		else{
-		s = url.substring( url.indexOf('#xrl=') + 5);
-		}
-
-
-		//console.log(s);
-		var q = decodeURIComponent(s);//window.location.search.substring(5));
-		//console.log(q);
-		var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
+// 		if (url.indexOf('#xrl=') == -1){
+// 			s = "";
+// 		}
+// 		else{
+// 		s = url.substring( url.indexOf('#xrl=') + 5);
+// 		}
 
 
-	if (querystring == "") {console.log("No link")} else {
-	var jsonx = getIt(querystring);
-	console.log("letsgo");
-	}
-	}   
+// 		//console.log(s);
+// 		var q = decodeURIComponent(s);//window.location.search.substring(5));
+// 		//console.log(q);
+// 		var querystring = q;//"http://api.instagram.com/publicapi/oembed/?url=https://instagram.com/p/6UMrqqi_ci/";
+
+
+// 	if (querystring == "") {console.log("No link")} else {
+// 	var jsonx = getIt(querystring);
+// 	console.log("letsgo");
+// 	}
+// 	}   
 		
 	function _doConvert() {
 		var json = x;
