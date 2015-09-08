@@ -79,7 +79,7 @@ require(["../src/json.human"], function (JsonHuman) {
 		
 	function _doConvert() {
 		var json = x;
-		//console.log("doconvert");
+		console.log("doconvert");
 		return convert(json, output);
 	}
 
