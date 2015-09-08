@@ -4,7 +4,7 @@ require.config({
 		"crel": "../lib/crel"
 	}
 });
-console.log(lol);
+console.log(x);
 require(["../src/json.human"], function (JsonHuman) {
 	"use strict";
 		var output = document.getElementById("output"),
