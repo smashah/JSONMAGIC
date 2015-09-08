@@ -6,27 +6,27 @@
         <script type="text/javascript">
         var lol = "LOLOLOL";
         var url = window.location.href;
-        var x;
+        var s;
         if (url.indexOf('#xrl=') == -1){
-            x = "";
+            s = "";
         }
         else{
-        x = url.substring( url.indexOf('#xrl=') + 5);
+        s = url.substring( url.indexOf('#xrl=') + 5);
         }
-        //var x = window.location.search.substring(5);
-        if (x !== "" ){
+        //var s = window.location.search.substring(5);
+        if (s !== "" ){
         function isEncoded(str){
             return decodeURIComponent(str) !== str;
         }
 
-        if (isEncoded(x) == false) {
-            //console.log(decodeURIComponent(x) !== x);
-            var d = encodeURIComponent(x);
-            //console.log("Not encoded. Encoding the query string: " + x + " to " + d);           
+        if (isEncoded(s) == false) {
+            //console.log(decodeURIComponent(s) !== s);
+            var d = encodeURIComponent(s);
+            //console.log("Not encoded. Encoding the query string: " + s + " to " + d);           
             window.location.href = ("http://smashah.github.io/JSONMAGIC/#xrl=" + d);
         } else {
-            //console.log(decodeURIComponent(x) !== x)
-            //console.log(decodeURIComponent(x))
+            //console.log(decodeURIComponent(s) !== s)
+            //console.log(decodeURIComponent(s))
             console.log("The string is already encoded, continuing ");
         }
     }
@@ -54,7 +54,6 @@
         }).responseText);}
 
 function letsee(data) {console.log(data)}
-console.log(x);
 function letsGo(){
 var url = window.location.href;
         var s; // = url.substring( url.indexOf('#xrl=') + 5);
@@ -75,9 +74,11 @@ var url = window.location.href;
 
     if (querystring == "") {console.log("No link")} else {
     var jsonx = getIt(querystring);
+    console.log(x);
     console.log(data);
     }
     }
+
         </script>
 
 
