@@ -10,7 +10,7 @@ http://smashah.github.io/JSONMAGIC/#xrl="insert link here"
 
 EXAMPLE:
 
-http://smashah.github.io/JSONMAGIC/#xrl=https://api.instagram.com/oembed/?url=https://instagram.com/p/6UMrqqi_ci/
+[http://smashah.github.io/JSONMAGIC/#xrl=https://api.instagram.com/oembed/?url=https://instagram.com/p/6UMrqqi_ci/] (http://smashah.github.io/JSONMAGIC/#xrl=https://api.instagram.com/oembed/?url=https://instagram.com/p/6UMrqqi_ci/)
 
 It will work with or without URI encoded links, it will encode it itself if it wasn't already.
 
