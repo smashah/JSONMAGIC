@@ -40,7 +40,7 @@ require(["../src/json.human"], function (JsonHuman) {
 			dataType: "jsonp",
 			url: querystring, 
 			success: function(data) {
-				 console.log( "inside function for data");
+				 // console.log( "inside function for data");
 				// responseobject = (data)
 				// alert(data);
 				x = data;
@@ -62,6 +62,10 @@ var url = window.location.href;
 		else{
 		s = url.substring( url.indexOf('#xrl=') + 5);
 		}
+
+		if (decodeURIComponent(s) != s) {
+			encodeURIComponent(s);
+		};
 
 
 		//console.log(s);
